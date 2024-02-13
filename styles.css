@@ -1,0 +1,31 @@
+body{
+    background-color: #0b1026;
+    color: white;
+}
+.search-container {
+    position: relative;
+  }
+
+  .search-input {
+    padding: 10px;
+    padding-left: 40px; /* Adjust the padding as needed */
+    width: 300px; /* Set the desired width */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+  }
+
+  .search-icon, .voice-search-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .search-icon {
+    left: 10px;
+  }
+
+  .voice-search-icon {
+    right: 10px;
+    cursor: pointer;
+  }
