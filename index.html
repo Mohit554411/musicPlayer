@@ -6,25 +6,645 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://kit.fontawesome.com/b4dff94a38.js" crossorigin="anonymous"></script>
   <title>Static Template</title>
 </head>
 
 <body>
-  <header>
-    <nav>
-      <div>
-        <img src="headerLogo.png" alt="headerLogo" />
-        <span>Favourites</span>
+  <nav class="nav-container">
+    <div class="left-navContent-container">
+      <img src="assets/images/headerLogo.png" alt="headerLogo" />
+      <span>Favourites</span>
+    </div>
+    <div class="right-navContent-container">
+      <div class="search-container">
+        <i class="fa-solid fa-magnifying-glass"></i>
+        <input type="text" class="search-input" placeholder="Search...">
+        <i class="fa-solid fa-microphone"></i>
       </div>
-      <div>
-        <div class="search-container">
-          <span class="search-icon">&#128269;</span>
-          <input type="text" class="search-input" placeholder="Search...">
-          <span class="voice-search-icon" onclick="startVoiceSearch()">&#128266;</span>
+      <div class="notification-container">
+        <i class="fa-solid fa-bell"></i>
+      </div>
+      <div class="profile-container">
+        <img src="assets/images/profile.png" alt="Profile" />
+      </div>
+    </div>
+  </nav>
+  <!-- Home Screen Code -->
+  <section class="home-section-container"  id="homeScreen">
+    <main class="main-screen-container">
+
+      <!-- Caraousal Code Started -->
+
+      <div class="carousel-container">
+        <div class="carousel-wrapper" id="carousel">
+          <div class="carousel-item">
+            <img src="assets/images/carousal-Image1.webp" alt="Image 1">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/carousal-Image2.webp" alt="Image 2">
+          </div>
+          <div class="carousel-item">
+            <img src="assets/images/carousal-Image3.webp" alt="Image 3">
+          </div>
+          <!-- Add more items as needed -->
         </div>
       </div>
-    </nav>
-  </header>
+
+      <!-- Caraousal Code Ended -->
+
+      <!-- Latest Relese Section Code Started -->
+
+      <div class="latest-release-container">
+        <h1>Latest Release</h1>
+        <div class="latest-song-row">
+          <!-- add latest song  -->
+          <!-- latest song 1 -->
+          <div class="latest-song-card" title="Heroine">
+            <div class="latest-song-poster">
+              <img src="assets/images/songPoster2.webp" alt="Latest Song Poster 1">
+              <div>
+                <b>Heroine</b>
+                <span>Nil Kamal Singh</span>
+              </div>
+            </div>
+            <div class="letest-details">
+              <i class="fa-solid fa-ellipsis"></i>
+              <span>4:44</span>
+            </div>
+          </div>
+          <!-- latest song 2 -->
+          <div class="latest-song-card" title="RajaJi ke Dilwa">
+            <div class="latest-song-poster">
+              <img src="assets/images/songPoster3.webp" alt="Latest Song Poster 1">
+              <div>
+                <b>RajaJi ke Dilwa</b>
+                <span>Pawan Singh</span>
+              </div>
+            </div>
+            <div class="letest-details">
+              <i class="fa-solid fa-ellipsis"></i>
+              <span>4:56</span>
+            </div>
+          </div>
+          <!-- latest song 3 -->
+          <div class="latest-song-card" title="Raate Diya Butake">
+            <div class="latest-song-poster">
+              <img src="assets/images/songPoster4.webp" alt=" Latest Song Poster 1">
+              <div>
+                <b>Raate Diya Butake</b>
+                <span>Pawan Singh</span>
+              </div>
+            </div>
+            <div class="letest-details">
+              <i class="fa-solid fa-ellipsis"></i>
+              <span>4:32</span>
+            </div>
+          </div>
+          <!-- latest song 4 -->
+          <div class="latest-song-card" title="Palang sagwan Ke">
+            <div class="latest-song-poster">
+              <img src="assets/images/songPoster5.webp" alt="Latest Song Poster 1">
+              <div>
+                <b>Palang sagwan Ke</b>
+                <span>Khesari Lal Yadav</span>
+              </div>
+            </div>
+            <div class="letest-details">
+              <i class="fa-solid fa-ellipsis"></i>
+              <span>4:32</span>
+            </div>
+          </div>
+          <!-- Add more items as needed -->
+        </div>
+      </div>
+
+      <!-- Latest Relese Section Code Ended -->
+
+      <!-- Popular Artists Section Code Started -->
+
+      <div class="popular-artists-container">
+
+        <h1>Popular Artists</h1>
+        <div class="popular-artist-row">
+          <!-- add popular artist  -->
+          <!-- popular artist 1 -->
+          <div class="popular-artist-card" onclick="showArtistPahe('PawanSingh')">
+            <img src="assets/images/artists1.webp" alt="Popular Artist 1" title="Pawan Singh">
+            <span>Pawan Singh</span>
+          </div>
+          <!-- popular artist 2 -->
+          <div class="popular-artist-card" onclick="showArtistPahe('NilKamalSingh')">
+            <img src="assets/images/artists2.webp" alt="Popular Artist 2" title="Nil Kamal Singh">
+            <span>Nil Kamal Singh</span>
+          </div>
+          <!-- popular artist 3 -->
+          <div class="popular-artist-card" onclick="showArtistPahe('Pooja')">
+            <img src="assets/images/artists3.webp" alt="Popular Artist 3" title="Dinchak Pooja">
+            <span>Dinchak Pooja</span>
+          </div>
+          <!-- popular artist 4 -->
+          <div class="popular-artist-card" onclick="showArtistPahe('KesariLalYadav')">
+            <img src="assets/images/artists4.webp" alt="Popular Artist 4" title="Khesari Lal Yadav">
+            <span>Khesari Lal Yadav</span>
+          </div>
+          <!-- Add more items as needed -->
+        </div>
+
+      </div>
+
+      <!-- Popular Artists Section Code Ended -->
+    </main>
+    <aside class="aside-screen-conatiner">
+      <div class="aside-screen-header">
+        <span>Queue</span>
+        <div onclick="showDropDown()">
+          <span>Queue</span>
+          <i class="fa-solid fa-angle-down" ></i>
+          <div class="queue-dropdown" id="dropdown">
+            <b>Playlists</b>
+            <b>Favourite Songs</b>
+          </div>
+        </div>
+       
+
+      </div>
+      <div class="aside-screen-content">
+
+        <!-- Add more queue song cards as needed  -->
+        <!-- song 1 -->
+        <div class="queue-song-card" title="Born To Die">
+          <div class="queue-song-poster">
+            <span>01</span>
+            <img src="assets/images/songPoster.webp" alt="Queue Song 1">
+            <div>
+              <b>Born To Die</b>
+              <span>Lara Delrey</span>
+            </div>
+          </div>
+          <div class="song-like">
+            <i class="fa-solid fa-heart" title="Like"></i>
+          </div>
+        </div>
+        <!-- song 2 -->
+        <div class="queue-song-card" title="Heroine">
+          <div class="queue-song-poster">
+            <span>02</span>
+            <img src="assets/images/songPoster2.webp" alt="Queue Song 2">
+            <div>
+              <b>Heroine</b>
+              <span>Nil Kamal Singh</span>
+            </div>
+          </div>
+          <div class="song-like">
+            <i class="fa-solid fa-heart" title="Like"></i>
+          </div>
+        </div>
+
+        <!-- song 3 -->
+        <div class="queue-song-card" title="RajaJi ke Dilwa">
+          <div class="queue-song-poster">
+            <span>03</span>
+            <img src="assets/images/songPoster3.webp" alt="Queue Song 3">
+            <div>
+              <b>RajaJi ke Dilwa</b>
+              <span>Pawan Singh</span>
+            </div>
+          </div>
+          <div class="song-like">
+            <i class="fa-solid fa-heart" title="Like"></i>
+          </div>
+        </div>
+
+        <!-- song 4 -->
+        <div class="queue-song-card" title="Raate Diya Butake">
+          <div class="queue-song-poster">
+            <span>04</span>
+            <img src="assets/images/songPoster4.webp" alt="Queue Song 4">
+            <div>
+              <b>Raate Diya Butake</b>
+              <span>Pawan Singh</span>
+            </div>
+          </div>
+          <div class="song-like">
+            <i class="fa-solid fa-heart" title="Like"></i>
+          </div>
+        </div>
+
+        <!-- song 5 -->
+        <div class="queue-song-card" title="Palang sagwan Ke">
+          <div class="queue-song-poster">
+            <span>05</span>
+            <img src="assets/images/songPoster5.webp" alt="Queue Song 5">
+            <div>
+              <b>Palang sagwan Ke</b>
+              <span>Khesari Lal Yadav</span>
+            </div>
+          </div>
+          <div class="song-like">
+            <i class="fa-solid fa-heart" title="Like"></i>
+          </div>
+        </div>
+
+        <!-- song 6 -->
+        <div class="queue-song-card" title="Born To Die">
+          <div class="queue-song-poster">
+            <span>06</span>
+            <img src="assets/images/songPoster.webp" alt="Queue Song 1">
+            <div>
+              <b>Born To Die</b>
+              <span>Lara Delrey</span>
+            </div>
+          </div>
+          <div class="song-like">
+            <i class="fa-solid fa-heart" title="Like"></i>
+          </div>
+        </div>
+
+        <!-- song 7 -->
+        <div class="queue-song-card" title="Born To Die">
+          <div class="queue-song-poster">
+            <span>07</span>
+            <img src="assets/images/songPoster.webp" alt="Queue Song 1">
+            <div>
+              <b>Born To Die</b>
+              <span>Lara Delrey</span>
+            </div>
+          </div>
+          <div class="song-like">
+            <i class="fa-solid fa-heart" title="Like"></i>
+          </div>
+        </div>
+
+        <!-- song 8 -->
+        <div class="queue-song-card" title="Born To Die">
+          <div class="queue-song-poster">
+            <span>08</span>
+            <img src="assets/images/songPoster.webp" alt="Queue Song 1">
+            <div>
+              <b>Born To Die</b>
+              <span>Lara Delrey</span>
+            </div>
+          </div>
+          <div class="song-like">
+            <i class="fa-solid fa-heart" title="Like"></i>
+          </div>
+        </div>
+
+        <!-- song 9 -->
+        <div class="queue-song-card" title="Born To Die">
+          <div class="queue-song-poster">
+            <span>09</span>
+            <img src="assets/images/songPoster.webp" alt="Queue Song 1">
+            <div>
+              <b>Born To Die</b>
+              <span>Lara Delrey</span>
+            </div>
+          </div>
+          <div class="song-like">
+            <i class="fa-solid fa-heart" title="Like"></i>
+          </div>
+        </div>
+
+        <!-- song 10 -->
+        <div class="queue-song-card" title="Born To Die">
+          <div class="queue-song-poster">
+            <span>10</span>
+            <img src="assets/images/songPoster.webp" alt="Queue Song 1">
+            <div>
+              <b>Born To Die</b>
+              <span>Lara Delrey</span>
+            </div>
+          </div>
+          <div class="song-like">
+            <i class="fa-solid fa-heart" title="Like"></i>
+          </div>
+        </div>
+
+
+      </div>
+    </aside>
+  </section>
+  <!-- Home Screen Code Ended -->
+
+  <!-- Single Playlist Screen -->
+  <section class="home-section-container"  style="display: none;" id="singleScreen">
+    <main class="main-screen-container">
+      <div class="backToHome" title="Back-To-Home" onclick="backToHome()">
+        <i class="fa-solid fa-arrow-left"></i>
+      </div>
+      <header class="single-screen-main-poster">
+        <img id = "artistImage" src="assets/images/artists1.webp" alt="Song Poster">
+        <div class="header-card">
+          <div class="header-card-heading">
+            <div>
+              <b id="artistName">Pawan Singh</b>
+              <span>Bojpuri Singer</span>
+            </div>
+            <div>
+              <span> 851 </span>
+              <span> Followers</span>
+            </div>
+          </div>
+          <div class="header-card-content">
+            <p id="artistBio">Pawan Singh (popularly known as Powerstar) (born 5 January 1986) is an Indian playback singer, actor,
+              music composer, stage performer.[4] He is known for his works in Bhojpuri Film Industry. He is widely
+              regarded as one of the best singer in Bhojpuri film industry. He began his musical career by working
+              behind the scenes, playing harmonium in musical concerts.</p>
+          </div>
+          <div class="header-card-buttons">
+            <button>Play All</button>
+            <button>Follow</button>
+            <b>247 Tracks | 128 Albums</b>
+          </div>
+        </div>
+      </header>
+      <div>
+        <div class="queue-song-card card-background" title="Born To Die">
+          <div class="queue-song-poster">
+            <span>01</span>
+            <img src="assets/images/songPoster.webp" alt="Queue Song 1">
+            <div>
+              <b>Born To Die</b>
+              <span>Lara Delrey</span>
+            </div>
+          </div>
+          <div class="song-like">
+            <i class="fa-solid fa-heart" title="Like"></i>
+            <i class="fa-solid fa-plus" title="Add-To-Playlist"></i>
+          </div>
+        </div>
+
+        <div class="queue-song-card card-background" title="Born To Die">
+          <div class="queue-song-poster">
+            <span>02</span>
+            <img src="assets/images/songPoster.webp" alt="Queue Song 3">
+            <div>
+              <b>Born To Die</b>
+              <span>Lara Delrey</span>
+            </div>
+          </div>
+          <div class="song-like">
+            <i class="fa-solid fa-heart" title="Like"></i>
+            <i class="fa-solid fa-plus" title="Add-To-Playlist"></i>
+          </div>
+        </div>
+
+        <div class="queue-song-card card-background" title="Born To Die">
+          <div class="queue-song-poster">
+            <span>03</span>
+            <img src="assets/images/songPoster.webp" alt="Queue Song 3">
+            <div>
+              <b>Born To Die</b>
+              <span>Lara Delrey</span>
+            </div>
+          </div>
+          <div class="song-like">
+            <i class="fa-solid fa-heart" title="Like"></i>
+            <i class="fa-solid fa-plus" title="Add-To-Playlist"></i>
+          </div>
+        </div>
+
+        <div class="queue-song-card card-background" title="Born To Die">
+          <div class="queue-song-poster">
+            <span>04</span>
+            <img src="assets/images/songPoster.webp" alt="Queue Song 4">
+            <div>
+              <b>Born To Die</b>
+              <span>Lara Delrey</span>
+            </div>
+          </div>
+          <div class="song-like">
+            <i class="fa-solid fa-heart" title="Like"></i>
+            <i class="fa-solid fa-plus" title="Add-To-Playlist"></i>
+          </div>
+        </div>
+
+        <div class="queue-song-card card-background" title="Born To Die">
+          <div class="queue-song-poster">
+            <span>05</span>
+            <img src="assets/images/songPoster.webp" alt="Queue Song 4">
+            <div>
+              <b>Born To Die</b>
+              <span>Lara Delrey</span>
+            </div>
+          </div>
+          <div class="song-like">
+            <i class="fa-solid fa-heart" title="Like"></i>
+            <i class="fa-solid fa-plus" title="Add-To-Playlist"></i>
+          </div>
+        </div>
+      </div>
+    </main>
+    <aside class="aside-screen-conatiner">
+      <div>
+        <div class="aside-screen-header">
+          <span>Similar Artists</span>
+          <div>
+            <span>View All</span>
+          </div>
+        </div>
+        <div>
+
+          <div class="latest-song-card" title="Heroine">
+            <div class="latest-song-poster">
+              <img src="assets/images/songPoster2.webp" alt="Latest Song Poster 1">
+              <div>
+                <b>Heroine</b>
+                <span>Nil Kamal Singh</span>
+              </div>
+            </div>
+            <div class="letest-details">
+              <i class="fa-solid fa-ellipsis"></i>
+              <span>4:44</span>
+            </div>
+          </div>
+
+          <div class="latest-song-card" title="Heroine">
+            <div class="latest-song-poster">
+              <img src="assets/images/songPoster2.webp" alt="Latest Song Poster 1">
+              <div>
+                <b>Heroine</b>
+                <span>Nil Kamal Singh</span>
+              </div>
+            </div>
+            <div class="letest-details">
+              <i class="fa-solid fa-ellipsis"></i>
+              <span>4:44</span>
+            </div>
+          </div>
+
+          <div class="latest-song-card" title="Heroine">
+            <div class="latest-song-poster">
+              <img src="assets/images/songPoster2.webp" alt="Latest Song Poster 1">
+              <div>
+                <b>Heroine</b>
+                <span>Nil Kamal Singh</span>
+              </div>
+            </div>
+            <div class="letest-details">
+              <i class="fa-solid fa-ellipsis"></i>
+              <span>4:44</span>
+            </div>
+          </div>
+
+          <div class="latest-song-card" title="Heroine">
+            <div class="latest-song-poster">
+              <img src="assets/images/songPoster2.webp" alt="Latest Song Poster 1">
+              <div>
+                <b>Heroine</b>
+                <span>Nil Kamal Singh</span>
+              </div>
+            </div>
+            <div class="letest-details">
+              <i class="fa-solid fa-ellipsis"></i>
+              <span>4:44</span>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+      <div class="recently-played">
+        <div class="aside-screen-header">
+          <span>Recently Played</span>
+          <div>
+            <span>View All</span>
+          </div>
+        </div>
+        <div>
+          
+          <div class="queue-song-card card-background" title="Born To Die">
+            <div class="queue-song-poster">
+              <span>01</span>
+              <img src="assets/images/songPoster.webp" alt="Queue Song 1">
+              <div>
+                <b>Born To Die</b>
+                <span>Lara Delrey</span>
+              </div>
+            </div>
+            <div class="song-like">
+              <i class="fa-solid fa-heart" title="Like"></i>
+            </div>
+          </div>
+
+          <div class="queue-song-card card-background" title="Born To Die">
+            <div class="queue-song-poster">
+              <span>02</span>
+              <img src="assets/images/songPoster.webp" alt="Queue Song 1">
+              <div>
+                <b>Born To Die</b>
+                <span>Lara Delrey</span>
+              </div>
+            </div>
+            <div class="song-like">
+              <i class="fa-solid fa-heart" title="Like"></i>
+            </div>
+          </div>
+
+          <div class="queue-song-card card-background" title="Born To Die">
+            <div class="queue-song-poster">
+              <span>03</span>
+              <img src="assets/images/songPoster.webp" alt="Queue Song 1">
+              <div>
+                <b>Born To Die</b>
+                <span>Lara Delrey</span>
+              </div>
+            </div>
+            <div class="song-like">
+              <i class="fa-solid fa-heart" title="Like"></i>
+            </div>
+          </div>
+
+          <div class="queue-song-card card-background" title="Born To Die">
+            <div class="queue-song-poster">
+              <span>04</span>
+              <img src="assets/images/songPoster.webp" alt="Queue Song 1">
+              <div>
+                <b>Born To Die</b>
+                <span>Lara Delrey</span>
+              </div>
+            </div>
+            <div class="song-like">
+              <i class="fa-solid fa-heart" title="Like"></i>
+            </div>
+          </div>
+
+          <div class="queue-song-card card-background" title="Born To Die">
+            <div class="queue-song-poster">
+              <span>05</span>
+              <img src="assets/images/songPoster.webp" alt="Queue Song 1">
+              <div>
+                <b>Born To Die</b>
+                <span>Lara Delrey</span>
+              </div>
+            </div>
+            <div class="song-like">
+              <i class="fa-solid fa-heart" title="Like"></i>
+            </div>
+          </div>
+
+          <div class="queue-song-card card-background" title="Born To Die">
+            <div class="queue-song-poster">
+              <span>06</span>
+              <img src="assets/images/songPoster.webp" alt="Queue Song 1">
+              <div>
+                <b>Born To Die</b>
+                <span>Lara Delrey</span>
+              </div>
+            </div>
+            <div class="song-like">
+              <i class="fa-solid fa-heart" title="Like"></i>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </aside>
+  </section>
+
+  <!-- Bottom Music PLayer -->
+  <footer class="bottom-music-player-container">
+    <div class="song-details">
+      <img src="assets/images/songPoster.webp" alt="Song Poster">
+      <div>
+        <b>Born To Die</b>
+        <span>Lara Delrey</span>
+      </div>
+      <div class="song-like">
+        <i class="fa-solid fa-heart" title="Like"></i>
+      </div>
+      <div class="song-like">
+        <i class="fa-solid fa-ban" title="delete"></i>
+      </div>
+    </div>
+    <div class="song-control">
+      <div class="song-control-button">
+        <i class="fa-solid fa-random" title="Random"></i>
+        <i class="fa-solid fa-backward" title="Backward"></i>
+        <i class="fa-solid fa-play" title="Play"></i>
+        <i class="fa-solid fa-forward" title="Forward"></i>
+        <i class="fa-solid fa-redo" title="Redo"></i>
+      </div>
+      <div class="song-progress">
+        <span>3:45</span>
+        <div class="progress-bar">
+          <div class="progress-value"></div>
+        </div>
+        <span>4:00</span>
+      </div>
+    </div>
+    <div class="volume-control">
+      <i class="fa-solid fa-list-check"></i>
+      <i class="fa-solid fa-headphones-simple"></i>
+      <i class="fa-solid fa-volume-high"></i>
+      <div class="audio-progress-bar">
+        <div class="audio-progress-value"></div>
+      </div>
+      <i class="fa-solid fa-up-right-and-down-left-from-center" title="Full-Screen"></i>
+    </div>
+  </footer>
 </body>
 
 <script src="script.js"></script>
